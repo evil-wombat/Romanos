@@ -1,11 +1,16 @@
 from romanos import *
 
-print (romano_a_entero('M'))
-print (romano_a_entero('D'))
-print (romano_a_entero('C'))
-print (romano_a_entero('L'))
-print (romano_a_entero('X'))
-print (romano_a_entero('V'))
-print (romano_a_entero('I'))
-print (romano_a_entero('Z'))
-print (romano_a_entero(23))
+print (simbolo_a_entero('M'))
+print (simbolo_a_entero('D'))
+print (simbolo_a_entero('C'))
+print (simbolo_a_entero('L'))
+print (simbolo_a_entero('X'))
+print (simbolo_a_entero('V'))
+print (simbolo_a_entero('I'))
+
+print (simbolo_a_entero('Z'))
+print (simbolo_a_entero(23))
+
+print (romano_a_entero('MMM')
+prinr (romano_a_entero('MMMM'))
+
