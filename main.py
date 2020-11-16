@@ -11,6 +11,7 @@ print (simbolo_a_entero('I'))
 print (simbolo_a_entero('Z'))
 print (simbolo_a_entero(23))
 
-print (romano_a_entero('MMM')
-prinr (romano_a_entero('MMMM'))
+print (romano_a_entero('MMM'))
+
+print (romano_a_entero('MMMM'))
 

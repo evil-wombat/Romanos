@@ -3,6 +3,8 @@ simbolos = {'M': 1000, 'D' : 500, 'C' : 100, 'L' : 50, 'X' : 10, 'V' : 5, 'I' : 
 tipo5 = ('V', 'D', 'L')
 tipo1 = ('I', 'X', 'C', 'M')
 
+restas = ('CD', 'CM', 'XL', 'XC', 'IV', 'IX')
+
 def simbolo_a_entero(romano):
     if isinstance (romano, str) and romano.upper() in simbolos:
         return simbolos[romano.upper()]
@@ -29,6 +31,15 @@ def romano_a_entero (num_romano):
             c_repes +=1
             if c_repes > 2:
                 raise OverflowError(f'Demasiados simbolos de tipo {caracter}')
+
+        elif valor_anterior and simbolos [caracter] > simbolos [valor_anterior]:
+            if valor_anterior + caracter not in restas:
+                raise ValueError
+            suma -= simbolos [valor_anterior] * 2 
+            c_repes = 0
+        
+        else:
+            c_repes = 0
                 
         suma += simbolo_a_entero (caracter)
         valor_anterior = caracter

@@ -16,12 +16,27 @@ class RomanosTest(unittest.TestCase):
 
         self.assertRaises (ValueError, simbolo_a_entero, 'Z')
         self.assertRaises (ValueError, simbolo_a_entero, 23)
-
-    def test_MMM (self):
-        self.assertEqual(romano_a_entero('MMM'), 3000)
+        
     
-    def test_MMMM (self):
+    def test_sumas (self):
+        self.assertEqual (romano_a_entero('MMM'), 3000)
+        self.assertEqual (romano_a_entero ('CC'), 200)
+        self.assertEqual (romano_a_entero ('XX'), 20)
+
         self.assertRaises (OverflowError, romano_a_entero, 'MMMM')
+        self.assertRaises (OverflowError, romano_a_entero, 'VV')
+
+    def test_restas (self):
+       self.assertEqual (romano_a_entero('IV'), 4)
+
+       self.assertRaises (ValueError, romano_a_entero, 'IC')
+
+"""
+MMMCMMM -> Error
+IIX -> Error
+"""
+
+        
 
 
 if __name__ == "__main__":
