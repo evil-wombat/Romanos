@@ -28,8 +28,13 @@ class RomanosTest(unittest.TestCase):
 
     def test_restas (self):
        self.assertEqual (romano_a_entero('IV'), 4)
+       self.assertEqual (romano_a_entero ('XCV'), 95)
+       self.assertEqual (romano_a_entero('XLV'), 45)
 
        self.assertRaises (ValueError, romano_a_entero, 'IC')
+       self.assertRaises (ValueError, romano_a_entero, 'VL')
+       self.assertRaises (OverflowError, romano_a_entero, 'MMMCMMM')
+       self.assertRaises (OverflowError, romano_a_entero, 'IIX')
 
 """
 MMMCMMM -> Error

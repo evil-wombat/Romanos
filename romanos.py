@@ -24,6 +24,9 @@ def romano_a_entero (num_romano):
     valor_anterior = ""
 
     for caracter in num_romano:
+        if num_romano.count(caracter) > 4:
+            raise OverflowError(f'Demasiados simbolos de tipo {caracter}') 
+
         if caracter == valor_anterior and caracter in tipo5:
             raise OverflowError(f'Demasiados simbolos de tipo {caracter}')
         
@@ -35,6 +38,8 @@ def romano_a_entero (num_romano):
         elif valor_anterior and simbolos [caracter] > simbolos [valor_anterior]:
             if valor_anterior + caracter not in restas:
                 raise ValueError
+            elif c_repes >= 1:
+                raise OverflowError(f'Demasiados simbolos de tipo {caracter}')
             suma -= simbolos [valor_anterior] * 2 
             c_repes = 0
         
