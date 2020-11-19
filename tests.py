@@ -35,12 +35,6 @@ class RomanosTest(unittest.TestCase):
        self.assertRaises (ValueError, romano_a_entero, 'VL')
        self.assertRaises (OverflowError, romano_a_entero, 'MMMCMMM')
        self.assertRaises (OverflowError, romano_a_entero, 'IIX')
-
-"""
-MMMCMMM -> Error
-IIX -> Error
-"""
-
         
 
 

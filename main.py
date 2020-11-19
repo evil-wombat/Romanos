@@ -1,5 +1,6 @@
 from romanos import *
 
+
 print (simbolo_a_entero('M'))
 print (simbolo_a_entero('D'))
 print (simbolo_a_entero('C'))
@@ -17,4 +18,5 @@ print (romano_a_entero('MMM'))
 
 print (romano_a_entero ('XLV'))
 
+print (convertir (987))
 
